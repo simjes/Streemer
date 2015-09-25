@@ -1,5 +1,4 @@
 angular.module('streemer', ['ionic', 'streemer.controllers'])
-
         .config(function ($stateProvider, $urlRouterProvider) {
             $stateProvider
                     .state('start', {
@@ -10,6 +9,11 @@ angular.module('streemer', ['ionic', 'streemer.controllers'])
                     .state('twitchChannelList', {
                         url: '/twitchChannels',
                         templateUrl: 'templates/twitchChannelList.html',
+                        controller: 'TwitchCtrl'
+                    })
+                    .state('twitchStream', {
+                        url: '/twitchStream',
+                        templateUrl: 'templates/streamPage.html',
                         controller: 'TwitchCtrl'
                     });
             $urlRouterProvider.otherwise("/");

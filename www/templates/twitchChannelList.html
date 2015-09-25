@@ -2,7 +2,7 @@
 <ion-view title="Streemer" ng-init="populateChannels()">
     <ion-scroll id="games-scroll">
         <div id="games-background" data-ng-repeat="channel in channels">
-                <div class="channel-card-config" ng-click="">
+                <div class="channel-card-config" ng-click="goToChannel('{{channel.channel.name}}')">
                     <div><img class="game-card-image" ng-src="{{channel.preview.large}}" /></div>
                     <div>
                         <div class="game-text">{{channel.channel.status}}</div>

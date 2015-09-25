@@ -1,0 +1,23 @@
+<ion-view title="Streemer" ng-init="">
+    <ion-content>
+        <div style="background-color: red; height: 500px; width: 100%">
+            <!-- <video width="100%" height="50%">
+                <source src="http://www.twitch.tv/twitch" type="video/mp4">
+            </video> -->
+            <iframe ng-src="{{getStreamLink()}}" height="50%" width="100%" frameborder="0"></iframe>
+        </div>
+
+    </ion-content>
+
+    <!-- <ion-scroll id="games-scroll">
+        <div id="games-background" data-ng-repeat="game in data.top">
+                <div class="game-card-config" ng-click="goToGame('{{game.game.name}}')">
+                    <div><img class="game-card-image" ng-src="{{game.game.box.large}}" /></div>
+                    <div>
+                        <div class="game-text">{{game.game.name}}</div>
+                        <div class="viewer-text">{{game.viewers}} Viewers</div>
+                    </div>
+                </div>
+        </div>
+        <ion-scroll /> -->
+</ion-view>
