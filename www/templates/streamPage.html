@@ -1,24 +1,6 @@
 <ion-view title="">
     <ion-content scroll="false">
-
-        <!-- <video width="100%" height="50%">
-            <source src="http://www.twitch.tv/twitch" type="video/mp4">
-        </video> -->
-        <div style="margin-bottom: -50px;"><iframe id="stream-player" ng-src="{{getStreamLink()}}">Unsupported browser</iframe></div>
-            
-        <div><iframe id="stream-chat" ng-src="{{getStreamChat()}}">Unsupported browser</iframe></div>           
-        
+        <iframe id="stream-player" ng-src="{{getStreamLink()}}">Unsupported browser</iframe>
+        <iframe id="stream-chat" ng-src="{{getStreamChat()}}">Unsupported browser</iframe>          
     </ion-content>
-
-    <!-- <ion-scroll id="games-scroll">
-        <div id="games-background" data-ng-repeat="game in data.top">
-                <div class="game-card-config" ng-click="goToGame('{{game.game.name}}')">
-                    <div><img class="game-card-image" ng-src="{{game.game.box.large}}" /></div>
-                    <div>
-                        <div class="game-text">{{game.game.name}}</div>
-                        <div class="viewer-text">{{game.viewers}} Viewers</div>
-                    </div>
-                </div>
-        </div>
-        <ion-scroll /> -->
 </ion-view>
