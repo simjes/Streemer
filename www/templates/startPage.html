@@ -1,13 +1,7 @@
 <ion-view title="Streemer" ng-init="init()">
     <ion-scroll id="games-scroll">
         <div id="games-background" data-ng-repeat="game in data.top">
-                <div class="game-card-config" ng-click="goToGame('{{game.game.name}}')">
-                    <div><img class="game-card-image" ng-src="{{game.game.box.large}}" /></div>
-                    <div>
-                        <div class="game-text">{{game.game.name}}</div>
-                        <div class="viewer-text">{{game.viewers}} Viewers</div>
-                    </div>
-                </div>
+                <game-info game="game"></game-info>
         </div>
         <ion-scroll />
 </ion-view>

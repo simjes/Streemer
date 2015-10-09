@@ -1,4 +1,4 @@
-angular.module('streemer', ['ionic', 'streemer.controllers'])
+angular.module('streemer', ['ionic', 'streemer.controllers', 'streemer.gameInfo', 'streemer.channelInfo'])
         .config(function ($stateProvider, $urlRouterProvider) {
             $stateProvider
                     .state('start', {
