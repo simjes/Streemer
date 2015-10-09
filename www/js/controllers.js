@@ -1,15 +1,9 @@
-var channelList;
 var stream;
 var numberOfGames = 0;
-var numberOfChannels = 0;
 
 angular.module('streemer.controllers', [])
   .controller('TwitchCtrl', function ($scope, $http, $sce) {
     $scope.games = [];
-
-    $scope.populateChannels = function () {
-      $scope.channels = channelList.streams;
-    };
 
     $scope.getStreamLink = function () {
       return $sce.trustAsResourceUrl(stream);
@@ -25,5 +19,9 @@ angular.module('streemer.controllers', [])
       }, function (error) {
         alert('error: ' + error.toString());
       });
+    };
+
+    $scope.populateStuff = function() {
+      $scope.channels = channelList.streams;
     };
   });
