@@ -1,5 +1,5 @@
 var channelList;
-//var stream;
+var stream;
 //var chat;
 
 
@@ -18,7 +18,7 @@ angular.module('streemer.controllers', [])
     };
 
     $scope.getStreamLink = function () {
-      return $sce.trustAsResourceUrl($stream);
+      return $sce.trustAsResourceUrl(stream);
     };
 
     /*
