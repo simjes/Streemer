@@ -53,13 +53,21 @@ $secondary-background-color: #ddd;
 }
 
 #stream-player {
-  height: 200px;
   width: 100%;
+  height: 30%;
   position: absolute;
+  iframe {
+    width: 100vw;
+    height: 50vw;
+  }
 }
 
 #stream-chat {
-  margin-top: 150px;
-  height: 495px;
+  height: 50%;
   width: 100%;
+  margin-top: 20vh;
+  iframe {
+    width: 100vw;
+    height: 95vh;
+  }
 }

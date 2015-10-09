@@ -43,13 +43,19 @@
   margin: 1%; }
 
 #stream-player {
-  height: 200px;
   width: 100%;
+  height: 30%;
   position: absolute; }
+  #stream-player iframe {
+    width: 100vw;
+    height: 50vw; }
 
 #stream-chat {
-  margin-top: 150px;
-  height: 495px;
-  width: 100%; }
+  height: 50%;
+  width: 100%;
+  margin-top: 20vh; }
+  #stream-chat iframe {
+    width: 100vw;
+    height: 95vh; }
 
 /*# sourceMappingURL=styles.css.map */
