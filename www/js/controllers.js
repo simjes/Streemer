@@ -6,7 +6,7 @@ var stream;
 angular.module('streemer.controllers', [])
   .controller('TwitchCtrl', function ($scope, $http, $sce) {
     $scope.init = function () {
-      $http.get('https://api.twitch.tv/kraken/games/top?limit=21').then(function (result) {
+      $http.get('https://api.twitch.tv/kraken/games/top?limit=12').then(function (result) {
         $scope.data = angular.fromJson(result).data;
       }, function (error) {
         alert('error: ' + error.toString());
