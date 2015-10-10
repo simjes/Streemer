@@ -1,8 +1,8 @@
-<ion-view title="" ng-init="populateStuff()">
-  <ion-scroll id="games-scroll">
+<ion-view title="">
+  <ion-content id="games-scroll">
     <div id="games-background" data-ng-repeat="channel in channels">
       <channel-info channel="channel"></channel-info>
     </div>
-  </ion-scroll>
- <!--<ion-infinite-scroll on-infinite="loadMoreChannels()" icon="ion-loading-c" distance="10%"></ion-infinite-scroll>-->
+  </ion-content>
+  <ion-infinite-scroll on-infinite="loadMoreChannels()" spinner="spiral" distance="10%"></ion-infinite-scroll>
 </ion-view>
