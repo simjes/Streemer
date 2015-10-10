@@ -1,4 +1,3 @@
-
 angular.module('streemer.channelInfo', [])
   .directive('channelInfo', function () {
     return {
@@ -12,10 +11,7 @@ angular.module('streemer.channelInfo', [])
         $scope.goToChannel = function (channelName) {
           $state.go('twitchStream');
           stream = "http://www.twitch.tv/" + channelName + "/embed";
-          //chat = "http://www.twitch.tv/"+ channelName+ "/chat";
         };
-
-
       }
     };
   });
