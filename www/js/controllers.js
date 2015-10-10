@@ -12,7 +12,12 @@ angular.module('streemer.controllers', [])
     };
 
     $scope.loadMoreGames = function () {
-      $http.get('https://api.twitch.tv/kraken/games/top?limit=6', {params: {offset: numberOfGames}}).then(function (result) {
+      $http.get('https://api.twitch.tv/kraken/games/top', {
+        params: {
+          limit: 6,
+          offset: numberOfGames
+        }
+      }).then(function (result) {
         numberOfGames += 6;
         angular.forEach(angular.fromJson(result).data.top, function (game) {
           $scope.games.push(game);
@@ -24,16 +29,13 @@ angular.module('streemer.controllers', [])
     };
 
     $scope.loadMoreChannels = function () {
-      console.log($scope.channels);
-
-
-      $http.get('https://api.twitch.tv/kraken/streams?limit=6', {
+      $http.get('https://api.twitch.tv/kraken/streams', {
         params: {
+          limit: 6,
           game: currentGame,
           offset: numberOfChannels
         }
       }).then(function (result) {
-        console.log(result);
         angular.forEach(angular.fromJson(result).data.streams, function (channel) {
           $scope.channels.push(channel);
         });
@@ -43,5 +45,4 @@ angular.module('streemer.controllers', [])
         alert('error: ' + error.toString());
       });
     }
-
   });
