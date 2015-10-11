@@ -1,8 +1,4 @@
-var stream;
-var numberOfGames = 0;
-var numberOfChannels = 0;
-
-angular.module('streemer.controllers', [])
+angular.module('streemer.twitchController', [])
   .controller('TwitchCtrl', function ($scope, $http, $sce) {
     $scope.games = [];
     $scope.channels = [];
@@ -44,5 +40,5 @@ angular.module('streemer.controllers', [])
       }, function (error) {
         alert('error: ' + error.toString());
       });
-    }
+    };
   });
