@@ -18,11 +18,9 @@ angular.module('streemer.gameInfo', [])
               $state.go('twitchChannelList');
               break;
             case 'tabs.hitbox':
-              $state.go('twitchChannelList');
+              $state.go('hitboxChannelList');
               break;
           }
-          //TODO: go to correct state
-          //$state.go('twitchChannelList');
         };
       }
     };

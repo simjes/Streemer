@@ -40,6 +40,7 @@ angular.module('streemer.hitboxController', [])
       });
     };
 
+    //TODO: this!
     /* $scope.loadMoreChannels = function () {
      $http.get('https://api.twitch.tv/kraken/streams', {
      params: {
