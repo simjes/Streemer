@@ -1,5 +1,4 @@
-var stream;
-var numberOfGames = 0;
+//TODO: tmp variable
 var numberOfChannels = 0;
 
 angular.module('streemer', ['ionic', 'streemer.twitchController', 'streemer.hitboxController', 'streemer.gameInfo', 'streemer.channelInfo'])

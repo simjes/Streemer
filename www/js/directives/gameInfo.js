@@ -13,7 +13,8 @@ angular.module('streemer.gameInfo', [])
         $scope.goToGame = function (gameName) {
           currentGame = gameName;
           numberOfChannels = 0;
-          $state.go('twitchChannelList');
+          //TODO: go to correct state
+          //$state.go('twitchChannelList');
         };
       }
     };

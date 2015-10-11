@@ -1,5 +1,8 @@
 angular.module('streemer.twitchController', [])
   .controller('TwitchCtrl', function ($scope, $http, $sce) {
+    var stream;
+    var numberOfGames = 0;
+
     $scope.games = [];
     $scope.channels = [];
 
@@ -16,8 +19,14 @@ angular.module('streemer.twitchController', [])
       }).then(function (result) {
         numberOfGames += 6;
         angular.forEach(angular.fromJson(result).data.top, function (game) {
-          $scope.games.push(game);
+          $scope.games.push({
+            name: game.game.name,
+            img: game.game.box.large,
+            viewers: game.viewers,
+            searchTerm: game.game.name
+          });
         });
+
         $scope.$broadcast('scroll.infiniteScrollComplete');
       }, function (error) {
         alert('error: ' + error.toString());
