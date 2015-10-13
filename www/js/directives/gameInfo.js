@@ -15,10 +15,10 @@ angular.module('streemer.gameInfo', [])
           numberOfChannels = 0;
           switch ($state.current.name) {
             case 'tabs.twitch':
-              $state.go('twitchChannelList');
+              $state.go('tabs.twitchChannelList');
               break;
             case 'tabs.hitbox':
-              $state.go('hitboxChannelList');
+              $state.go('tabs.hitboxChannelList');
               break;
           }
         };

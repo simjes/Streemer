@@ -18,10 +18,14 @@ angular.module('streemer', ['ionic', 'streemer.twitchController', 'streemer.hitb
           }
         }
       })
-      .state('twitchChannelList', {
+      .state('tabs.twitchChannelList', {
         url: '/twitchChannels',
-        templateUrl: 'templates/twitch/twitchChannelList.html',
-        controller: 'TwitchCtrl'
+        views: {
+          'twitch-tab': {
+            templateUrl: 'templates/twitch/twitchChannelList.html',
+            controller: 'TwitchCtrl'
+          }
+        }
       })
       .state('tabs.hitbox', {
         url: '/hitbox',
@@ -32,10 +36,14 @@ angular.module('streemer', ['ionic', 'streemer.twitchController', 'streemer.hitb
           }
         }
       })
-      .state('hitboxChannelList', {
+      .state('tabs.hitboxChannelList', {
         url: '/hitboxChannels',
-        templateUrl: 'templates/hitbox/hitboxChannelList.html',
-        controller: 'HitboxCtrl'
+        views: {
+          'hitbox-tab': {
+            templateUrl: 'templates/hitbox/hitboxChannelList.html',
+            controller: 'HitboxCtrl'
+          }
+        }
       });
 
     $urlRouterProvider.otherwise("/tab/twitch");

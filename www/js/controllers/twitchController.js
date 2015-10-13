@@ -42,7 +42,12 @@ angular.module('streemer.twitchController', [])
         }
       }).then(function (result) {
         angular.forEach(angular.fromJson(result).data.streams, function (channel) {
-          $scope.channels.push(channel);
+          $scope.channels.push({
+            caster_name: channel.channel.name,
+            img: channel.preview.large,
+            name: channel.channel.status,
+            viewers: channel.viewers
+          });
         });
         numberOfChannels += 6;
         $scope.$broadcast('scroll.infiniteScrollComplete');
