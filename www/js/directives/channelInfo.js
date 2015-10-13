@@ -15,8 +15,8 @@ angular.module('streemer.channelInfo', [])
               $state.go('tabs.twitchStream');
               break;
             case 'tabs.hitboxChannelList':
-              stream = "";
-              $state.go('tabs.hitboxChannelList');
+              stream = "http://hitbox.tv/#!/embed/" + channelName;
+              $state.go('tabs.hitboxStream');
               break;
           }
         };

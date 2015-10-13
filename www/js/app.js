@@ -53,6 +53,15 @@ angular.module('streemer', ['ionic', 'streemer.twitchController', 'streemer.hitb
             controller: 'HitboxCtrl'
           }
         }
+      })
+      .state('tabs.hitboxStream', {
+        url: '/hitboxStream',
+        views: {
+          'hitbox-tab': {
+            templateUrl: 'templates/streamPage.html',
+            controller: 'HitboxCtrl'
+          }
+        }
       });
 
     $urlRouterProvider.otherwise("/tab/twitch");

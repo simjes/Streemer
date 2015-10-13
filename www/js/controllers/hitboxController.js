@@ -7,9 +7,9 @@ angular.module('streemer.hitboxController', [])
     $scope.games = [];
     $scope.channels = [];
 
-    /*$scope.getStreamLink = function () {
-     return $sce.trustAsResourceUrl(stream);
-     };*/
+    $scope.getStreamLink = function () {
+      return $sce.trustAsResourceUrl(stream);
+    };
 
     $scope.loadMoreGames = function () {
       $http.get('https://api.hitbox.tv/games', {
@@ -51,7 +51,7 @@ angular.module('streemer.hitboxController', [])
         angular.forEach(angular.fromJson(result).data.livestream, function (channel) {
           $scope.channels.push({
             caster_name: channel.media_display_name,
-            img: 'http://edge.sf.hitbox.tv' +  channel.media_thumbnail_large,
+            img: 'http://edge.sf.hitbox.tv' + channel.media_thumbnail_large,
             name: channel.media_status,
             viewers: channel.media_views
           });
