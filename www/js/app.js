@@ -1,5 +1,5 @@
-//TODO: tmp variable
 var numberOfChannels = 0;
+var stream = "";
 
 angular.module('streemer', ['ionic', 'streemer.twitchController', 'streemer.hitboxController', 'streemer.gameInfo', 'streemer.channelInfo'])
   .config(function ($stateProvider, $urlRouterProvider) {
@@ -23,6 +23,15 @@ angular.module('streemer', ['ionic', 'streemer.twitchController', 'streemer.hitb
         views: {
           'twitch-tab': {
             templateUrl: 'templates/twitch/twitchChannelList.html',
+            controller: 'TwitchCtrl'
+          }
+        }
+      })
+      .state('tabs.twitchStream', {
+        url: '/twitchStream',
+        views: {
+          'twitch-tab': {
+            templateUrl: 'templates/streamPage.html',
             controller: 'TwitchCtrl'
           }
         }

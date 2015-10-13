@@ -1,6 +1,5 @@
 angular.module('streemer.twitchController', [])
   .controller('TwitchCtrl', function ($scope, $http, $sce) {
-    var stream;
     var numberOfGames = 0;
 
     $scope.games = [];

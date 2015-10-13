@@ -1,6 +1,6 @@
 angular.module('streemer.hitboxController', [])
   .controller('HitboxCtrl', function ($scope, $http, $sce) {
-    var stream;
+
     var numberOfGames = 0;
     var imgLink = "";
 

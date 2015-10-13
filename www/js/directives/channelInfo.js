@@ -9,8 +9,16 @@ angular.module('streemer.channelInfo', [])
       templateUrl: 'templates/directive/channelInfo.html',
       controller: function ($scope, $http, $state) {
         $scope.goToChannel = function (channelName) {
-          $state.go('twitchStream');
-          stream = "http://www.twitch.tv/" + channelName + "/embed";
+          switch ($state.current.name) {
+            case 'tabs.twitchChannelList':
+              stream = "http://www.twitch.tv/" + channelName + "/embed";
+              $state.go('tabs.twitchStream');
+              break;
+            case 'tabs.hitboxChannelList':
+              stream = "";
+              $state.go('tabs.hitboxChannelList');
+              break;
+          }
         };
       }
     };
