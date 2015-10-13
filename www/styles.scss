@@ -54,6 +54,23 @@ $secondary-background-color: #ddd;
   }
 }
 
+.tabs .tab-item .icon.hitbox {
+  fill:red;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  height: 100%;
+  background-image: url('img/hitbox-stream.svg');
+  background-size:contain;
+}
+
+.tabs .tab-item .icon.hitbox-outline {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  height: 100%;
+  background-image: url('img/hitbox-stream-outline.svg');
+  background-size:contain;
+}
+
 /*#stream-player {
   width: 100%;
   height: 100%;
