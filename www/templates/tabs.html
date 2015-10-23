@@ -1,11 +1,9 @@
-<ion-tabs class="tabs-royal tabs-icon-only">
-
-  <ion-tab icon-on="ion-social-twitch" icon-off="ion-social-twitch-outline" href="#/tabs/twitch" ng-click="onTabSelected('twitch')" ng-controller="TabsController">
+<ion-tabs ng-class="'tabs-' + appTheme + ' tabs-icon-only'" ng-controller="TabsController">
+  <ion-tab icon-on="ion-social-twitch" icon-off="ion-social-twitch-outline" href="#/tabs/twitch"
+           ng-click="onTabSelected('twitch')">
     <ion-nav-view name="twitch-tab" class="slide-left-right">dasdsd</ion-nav-view>
   </ion-tab>
-
-  <ion-tab icon-on="hitbox" icon-off="hitbox-outline" href="#/tabs/hitbox" ng-click="onTabSelected('hitbox')" ng-controller="TabsController">
+  <ion-tab icon-on="hitbox" icon-off="hitbox" href="#/tabs/hitbox" ng-click="onTabSelected('hitbox')">
     <ion-nav-view name="hitbox-tab" class="slide-left-right"></ion-nav-view>
   </ion-tab>
-
 </ion-tabs>

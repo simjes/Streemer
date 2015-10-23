@@ -20,6 +20,7 @@ angular.module('streemer', ['ionic', 'streemer.twitchController', 'streemer.hitb
       })
       .state('tabs.twitchChannelList', {
         url: '/twitchChannels',
+        cache: false,
         views: {
           'twitch-tab': {
             templateUrl: 'templates/twitch/twitchChannelList.html',
@@ -48,6 +49,7 @@ angular.module('streemer', ['ionic', 'streemer.twitchController', 'streemer.hitb
       })
       .state('tabs.hitboxChannelList', {
         url: '/hitboxChannels',
+        cache: false,
         views: {
           'hitbox-tab': {
             templateUrl: 'templates/hitbox/hitboxChannelList.html',
@@ -65,20 +67,23 @@ angular.module('streemer', ['ionic', 'streemer.twitchController', 'streemer.hitb
           }
         }
       });
-
     $urlRouterProvider.otherwise("/tab/twitch");
   })
-  .controller('TabsController', function($scope, $state) {
+  .controller('TabsController', function ($scope, $state) {
+    $scope.appTheme = 'royal';
+
     $scope.onTabSelected = function (selectedTab) {
       switch (selectedTab) {
         case 'twitch':
-              $state.go('tabs.twitch');
-              break;
+          $scope.appTheme = 'royal';
+          $state.go('tabs.twitch');
+          break;
         case 'hitbox':
-              $state.go('tabs.hitbox');
-              break;
+          $scope.appTheme = 'balanced';
+          $state.go('tabs.hitbox');
+          break;
       }
-    }
+    };
   });
 /*$stateProvider
  .state('start', {
