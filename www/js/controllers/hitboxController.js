@@ -22,7 +22,7 @@ angular.module('streemer.hitboxController', [])
         numberOfGames += 6;
         angular.forEach(angular.fromJson(result).data.categories, function (game) {
           if (game.category_logo_large === null) {
-            imgLink = 'img/ionic.png'
+            imgLink = 'img/default-hitbox.png'
           } else {
             imgLink = 'http://edge.sf.hitbox.tv' + game.category_logo_large;
           }
