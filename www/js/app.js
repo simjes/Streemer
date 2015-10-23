@@ -29,6 +29,7 @@ angular.module('streemer', ['ionic', 'streemer.twitchController', 'streemer.hitb
       })
       .state('tabs.twitchStream', {
         url: '/twitchStream',
+        cache: false,
         views: {
           'twitch-tab': {
             templateUrl: 'templates/streamPage.html',
@@ -56,6 +57,7 @@ angular.module('streemer', ['ionic', 'streemer.twitchController', 'streemer.hitb
       })
       .state('tabs.hitboxStream', {
         url: '/hitboxStream',
+        cache: false,
         views: {
           'hitbox-tab': {
             templateUrl: 'templates/streamPage.html',
@@ -65,6 +67,18 @@ angular.module('streemer', ['ionic', 'streemer.twitchController', 'streemer.hitb
       });
 
     $urlRouterProvider.otherwise("/tab/twitch");
+  })
+  .controller('TabsController', function($scope, $state) {
+    $scope.onTabSelected = function (selectedTab) {
+      switch (selectedTab) {
+        case 'twitch':
+              $state.go('tabs.twitch');
+              break;
+        case 'hitbox':
+              $state.go('tabs.hitbox');
+              break;
+      }
+    }
   });
 /*$stateProvider
  .state('start', {
