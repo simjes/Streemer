@@ -1,6 +1,6 @@
 {
   "name": "Streemer",
-  "app_id": "",
+  "app_id": "65d9b1ba",
   "gulpStartupTasks": [
     "sass",
     "watch"
