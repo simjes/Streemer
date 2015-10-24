@@ -28,9 +28,10 @@ angular.module('streemer.twitchController', [])
 
         $scope.$broadcast('scroll.infiniteScrollComplete');
       }, function (error) {
-        alert('error: ' + error.toString());
+        //alert('error: ' + error.toString());
       });
     };
+
 
     $scope.loadMoreChannels = function () {
       $http.get('https://api.twitch.tv/kraken/streams', {
@@ -51,7 +52,7 @@ angular.module('streemer.twitchController', [])
         numberOfChannels += 6;
         $scope.$broadcast('scroll.infiniteScrollComplete');
       }, function (error) {
-        alert('error: ' + error.toString());
+        //alert('error: ' + error.toString());
       });
     };
   });

@@ -36,7 +36,7 @@ angular.module('streemer.hitboxController', [])
         });
         $scope.$broadcast('scroll.infiniteScrollComplete');
       }, function (error) {
-        alert('error: ' + error.toString());
+        //alert('error: ' + error.toString());
       });
     };
 
@@ -59,7 +59,7 @@ angular.module('streemer.hitboxController', [])
         numberOfChannels += 6;
         $scope.$broadcast('scroll.infiniteScrollComplete');
       }, function (error) {
-        alert('error: ' + error.toString());
+        //alert('error: ' + error.toString());
       });
     };
   });
